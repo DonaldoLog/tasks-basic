@@ -1,0 +1,53 @@
+@import"~bulma/bulma.sass";
+
+.container {
+    font-family: "Roboto", sans-serif;
+    width: 320px;
+    height: 409px;
+    display: block;
+}
+.logo {
+    width: 100%;
+    text-align: center;
+    margin-top: 1%;
+}
+
+input[type="text"] {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #FF9300;
+    margin-bottom: 10px;
+    color: #212121;
+    font-size: 25px;
+}
+
+button[type="submit"] {
+    color: #ffffff;
+    font-size: 20px;
+    width: 50%;
+    left: 8em;
+    background-color: #00BFD6;
+    position: absolute;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.label {
+    // text-align: left;
+    font-size: 10px;
+    color: #FF9300;
+    display: block;
+    margin: 5px0;
+
+}
+
+.titulo {
+    color: #00BFD6;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+html {
+    font-size: 100%;
+}
