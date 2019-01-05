@@ -3,7 +3,9 @@
     nav.navbar.is-fixed-top(role="navigation" arial-label="main navigation")
       .navbar-brand
         a.navbar-item
-          img.logo(src="./assets/logo-movie.png")
+          img.logo(src="./assets/logo-movie.png" height="50" width="50")
+          div
+            h1 Cinelog
       .navbar-start
         .navbar-item
           input.mainsearch.input(type="text" placeholder="Buscar tu peli, actor, actriz o director favorito")
@@ -59,7 +61,7 @@
         .level.is-mobile
            .level-left
             .level-item
-              h2.texto Aclamdas por la critica
+              h2.texto Aclamadas por la critica
         .level.is-mobile
           .level-item
             div.caja
