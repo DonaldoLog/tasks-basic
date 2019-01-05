@@ -1,9 +1,10 @@
 <template lang="pug">
   #app
     input(v-model="name")
-    p {{ name }}
-
-    a(:href="url") link
+    input(v-model="lastName")
+    input(v-model="birthday" type="date")
+    P {{fullName}}
+    p {{edad}}
 </template>
 
 <script>
@@ -12,7 +13,23 @@ export default {
   data () {
     return {
       name: '',
-      url: 'https://donaldolog.xyz'
+      lastName: '',
+      birthday: ''
+    }
+  },
+  computed: {
+    edad () {
+      let birthday = new Date(this.birthday)
+      let now = new Date()
+      return new Date(now - birthday).getFullYear() - 1970
+    },
+    fullName () {
+      return `${this.name}  ${this.lastName}`
+    }
+  },
+  watch: {
+    name (newVal, oldVal) {
+      console.log(newVal, oldVal)
     }
   }
 }
