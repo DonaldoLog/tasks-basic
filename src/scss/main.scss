@@ -1,53 +1,102 @@
 @import"~bulma/bulma.sass";
+$rosa: #FF535B;
 
-.container {
-    font-family: "Roboto", sans-serif;
-    width: 320px;
-    height: 409px;
-    display: block;
+body{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
 }
+
+#app {
+   
+	font-family: 'Lato', sans-serif;
+}
+
 .logo {
-    width: 100%;
     text-align: center;
     margin-top: 1%;
+    margin-left: 90%;
 }
 
-input[type="text"] {
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #FF9300;
-    margin-bottom: 10px;
-    color: #212121;
-    font-size: 25px;
+.navbar{
+    background-color: #ffffff;
+    box-shadow: 0 1px 10px #D9D9D9;
 }
 
-button[type="submit"] {
+.mainsearch {
+    width: 55rem;
+    margin-left: 40%;
+}
+
+i{
     color: #ffffff;
-    font-size: 20px;
-    width: 50%;
-    left: 8em;
-    background-color: #00BFD6;
-    position: absolute;
-    padding: 6px;
-    border-radius: 6px;
 }
 
-.label {
-    // text-align: left;
-    font-size: 10px;
-    color: #FF9300;
-    display: block;
-    margin: 5px0;
 
-}
 
-.titulo {
-    color: #00BFD6;
-    font-size: 1.7rem;
-    font-weight: bold;
+aside{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    height: 900px;
+    width:100px;
+    background-color: $rosa;
     text-align: center;
+    bottom: 0;
+    li {
+        margin-top: 35%;
+        cursor: pointer;
+        align-self:flex-start;
+        .menu-text{
+            color:#FFF;
+            font-size:15px;
+            font-weight:bold;
+        }
+        &:last-child{
+            position: absolute;
+            bottom: -30%;
+            left: 1.5%;
+        }
+    }
 }
 
-html {
-    font-size: 100%;
+.user-info{
+    border-radius: 2px;
 }
+
+.caja {
+    height: 192px;
+    width: 287px;
+    position: relative;
+    cursor: pointer;
+    .sombra{
+        background: rgba(255, 83, 91, .75);
+        top: 53%;
+        color: white;
+        text-align: justify;
+        position: absolute;
+        padding: 5px;
+        font-size: 75%;
+        h1{
+            font-size: 145%;
+            font-weight:bold;
+        }
+    }
+}
+
+.texto{
+    font-size: 145%;
+    font-weight:bold;
+}
+
+.container{
+    margin-top: -0%;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    height: -moz-fill-available;
+    width: -moz-fill-available;
+}
+
+
+
+
+
