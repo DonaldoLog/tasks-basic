@@ -1,11 +1,9 @@
 <template lang="pug">
   #app
-    p(v-if="showValue") {{ value }}
-    p(v-else-if="showValue") {{ value + ' algo'}}
-    p(v-else) {{ value + 'otro mas'}}
+    input(v-model="name")
+    p {{ name }}
 
-    ul
-      li(v-for="(item, index) in items" :key="index") {{index}}{{ item }}
+    a(:href="url") link
 </template>
 
 <script>
@@ -13,10 +11,8 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Hola mundo',
-      showValue: false,
-      value: 'hola',
-      items: [1, 2, 3, 4, 5]
+      name: '',
+      url: 'https://donaldolog.xyz'
     }
   }
 }
