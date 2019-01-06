@@ -1,22 +1,44 @@
 <template lang="pug">
   #app
-    input(v-model="name")
-    button(@click="format") Format
-    p {{ formattedName }}
+    section.section
+      nav.navbar.has-shadow
+        .container
+          input.input.is-large(type="text",
+            placeholder="Buscar canciones...",
+            v-model="searchQuery"
+          )
+          a.button.is-info.is-large(@click="search") Buscar
+          a.button.is-danger.is-large &times;
+          p
+            small {{ searchMessage }}
+      .container
+        .columns
+          .column(v-for="(track, index) in tracks" :key="index") {{ track.name }} {{ track.artist}}
 </template>
 
 <script>
+const tracks = [
+  { name: 'Master of puppets', artist: 'Metallica' },
+  { name: 'Afterlife', artist: 'Avenged Sevenfold' },
+  { name: 'Starway To Heaven', artist: 'Led Zeppelin' }
+]
 export default {
   name: 'app',
   data () {
     return {
-      name: '',
-      formattedName: ''
+      searchQuery: '',
+      tracks: []
+    }
+  },
+  computed: {
+    searchMessage () {
+      return `Encontrados: ${this.tracks.length}`
     }
   },
   methods: {
-    format () {
-      this.formattedName = this.name.trim().split(' ').join('-').toUpperCase()
+    search () {
+      this.tracks = tracks
+      console.log(this.searchQuery)
     }
   }
 }
