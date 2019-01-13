@@ -4,7 +4,7 @@
         .column.is-8.is-offset-2
           .box
             h1.title Admin tasks
-            img(src="./assets/tasks.png")
+            img.logo(src="./assets/tasks.png" height="200" width="200")
             .columns
               .column.is-full.is-three-fifths.is-offset-one-fifth
                 .columns.is-gapless
