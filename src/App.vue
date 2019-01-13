@@ -71,7 +71,7 @@ export default {
       // console.log(m2.length, 'leng')
       if (m2 < 10) {
         m2 = '0' + m2
-        console.log(1)
+        // console.log(1)
       }
       if (h < 10) {
         h = '0' + h
