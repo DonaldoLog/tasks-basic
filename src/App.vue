@@ -4,6 +4,7 @@
         .column.is-8.is-offset-2
           .box
             h1.title Admin tasks
+            img(src="./assets/tasks.png")
             .columns
               .column.is-full.is-three-fifths.is-offset-one-fifth
                 .columns.is-gapless
