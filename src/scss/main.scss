@@ -1,12 +1,17 @@
 @import"~bulma/bulma.sass";
 $rosa: #FF535B;
-
+html{
+    background-color: rgba(0, 0, 0, 0.11);
+}
 body{
     font-family: 'Lato', sans-serif;
     margin: 0;
 }
 
 #app {
-   
 	font-family: 'Lato', sans-serif;
+}
+
+.title {
+    text-align: center;
 }
