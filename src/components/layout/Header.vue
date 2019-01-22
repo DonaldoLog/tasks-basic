@@ -3,10 +3,12 @@
     .hero-head
       header.navbar
         .container
-          .nav-left
-            .nav-item
+          .navbar-left
+            .navbar-item
               strong App music
-          .nav-rigth.nav-menu
+          .navbar-end.navbar-menu
+            router-link.navbar-item(:to="{ name: 'search' }") Buscar
+            router-link.navbar-item(to="about") Nosotros
     .hero-body
       .container.has-text-centered
         h1.title App Music
