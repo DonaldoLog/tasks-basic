@@ -6,6 +6,7 @@ import { faHome, faFire, faHeart, faCog } from '@fortawesome/free-solid-svg-icon
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import msToMm from '@/filters/ms-to-mm'
+import blur from '@/directives/blur'
 
 import routes from '@/routes'
 
@@ -18,6 +19,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(VueRouter)
 Vue.use(EventeBus)
 Vue.use(msToMm)
+Vue.use(blur)
 
 Vue.config.productionTip = false
 

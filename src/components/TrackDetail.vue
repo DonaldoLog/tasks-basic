@@ -1,17 +1,35 @@
 <template lang="pug">
-  .container
+  .container(v-if="track && track.album")
     .columns
-      .column.is-5.is-offset-4
-        ap-track(:track="track")
+      .column.is-3.has-text-centered
+        figure.media-left
+          p.image
+            img(:src="track.album.images[0].url")
+          p
+            a.button.is-primary.is-large
+              span.icon(@click="selectTrack")
+      .column.is-8
+        .panel
+          .panel-heading
+            h1.title {{ track.name }}
+          .panel-block
+            article.media
+              .media-content
+                .content
+                  ul(v-for="(val, index) in track" :key="index")
+                    li
+                      strong {{ index }}:&nbsp;
+                        span {{ val }}
+                nav.level
+                  .level-left
+                    a.level-item
 </template>
 <script>
 import trackService from '@/services/track'
-import ApTrack from '@/components/Track.vue'
+import trackMixin from '@/mixins/track'
 
 export default {
-  components: {
-    ApTrack
-  },
+  mixins: [ trackMixin ],
   data () {
     return {
       track: {}

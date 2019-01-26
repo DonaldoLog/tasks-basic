@@ -1,14 +1,18 @@
 <template lang="pug">
   main
-    ap-notification(v-show="showNotification", :tipo="tipo.clase")
-      p(slot="body", v-show="tipo.clase == 'is-danger'") Sin resultados
-      p(slot="body", v-show="tipo.clase == 'is-success'") {{ searchMessage }}
+    transition(name="move")
+      ap-notification(v-show="showNotification", :tipo="tipo.clase")
+        p(slot="body", v-show="tipo.clase == 'is-danger'") Sin resultados
+        p(slot="body", v-show="tipo.clase == 'is-success'") {{ searchMessage }}
 
-    ap-loader(v-show="isLoading")
+    transition(name="move")
+      ap-loader(v-show="isLoading")
+
     section.section(v-show="!isLoading")
       nav.navbar
         .container
-          input.input.is-large(type="text",
+          input.input.is-large(
+            type="text",
             placeholder="Buscar canciones...",
             v-model="searchQuery",
             @keyup.enter="search"
@@ -22,6 +26,7 @@
           .columns.is-multiline
             .column.is-one-quarter(v-for="(track, index) in tracks" :key="index")
               ap-track(
+                v-blur="track.preview_url"
                 :class="{ 'is-active': track.id === selectedTrack }"
                 :track="track",
                 @select="setSelectedTrack"
